@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthStatus from "@/components/AuthStatus";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -18,13 +19,8 @@ export default function Header() {
           <li>
             <Link href="/members">Members</Link>
           </li>
-          <li>
-            <Link href="/signup">Sign up</Link>
-          </li>
-          <li>
-            <Link href="/login">Log in</Link>
-          </li>
         </ul>
+        <AuthStatus />
       </nav>
     </header>
   );
