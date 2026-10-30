@@ -20,7 +20,7 @@ async function signIn(formData) {
     redirect("/login?error=true");
   }
 
-  redirect("/");
+  redirect("/profile");
 }
 
 export default async function LoginPage({ searchParams }) {
