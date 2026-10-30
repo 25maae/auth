@@ -6,7 +6,10 @@ export default function Home() {
     <main>
       <section className={styles.hero}>
         <h1>Supabase Auth in Next.js</h1>
-        <p>Create an account, log in and see your profile. Only the profile page requires login.</p>
+        <p>
+          Create an account, log in and see your profile. The profile and
+          members pages require login.
+        </p>
       </section>
 
       <h2 className={styles.heading}>Routes</h2>
@@ -29,6 +32,11 @@ export default function Home() {
         <li>
           <Link href="/profile">/profile</Link>
           <span>Your email, your user id and log out</span>
+          <em className={styles.protected}>Logged in</em>
+        </li>
+        <li>
+          <Link href="/members">/members</Link>
+          <span>Content for members only</span>
           <em className={styles.protected}>Logged in</em>
         </li>
       </ul>
