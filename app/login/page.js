@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/auth";
 
 export const metadata = {
   title: "Log in",
@@ -26,6 +27,11 @@ async function signIn(formData) {
 export default async function LoginPage({ searchParams }) {
   // ?error=true is set by signIn when the email or password is wrong
   const { error } = await searchParams;
+      const user = await getCurrentUser();
+  
+      if (user) {
+        redirect("/profile");
+      }
 
   return (
     <main>
