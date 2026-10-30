@@ -1,0 +1,58 @@
+.hero {
+  max-width: 42rem;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.routes {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 42rem;
+  list-style: none;
+}
+
+.routes li {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.routes a {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 600;
+}
+
+.routes span {
+  color: var(--muted);
+}
+
+.routes em {
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+.routes .protected {
+  border-color: var(--accent);
+  color: var(--accent);
+}
